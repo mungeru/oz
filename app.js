@@ -1,4 +1,4 @@
-(function(){
+﻿(function(){
   "use strict";
 
   var svg = d3.select("svg");
@@ -24,7 +24,7 @@
     var frontPath = d3.geo.path().projection(projection90);
     var backPath = d3.geo.path().projection(projection180);
 
-    d3.json("https://raw.githubusercontent.com/mungeru/oz/refs/heads/main/Landmasses.geojson", function(geojson){
+    d3.json("https://github.com/mungeru/oz/blob/main/Landmasses.geojson", function(geojson){
       var stage = svg.append("g")
         .attr("transform", "rotate(23.4," + width/2 + "," + height/2 + ")");
 
@@ -122,7 +122,7 @@
       .attr("font-family", "Arial")
       .attr("font-weight", "bold")
       .style("fill", "white")
-      .text("\u30ab\u30a6\u30f3\u30c8\u30c0\u30a6\u30f3\u958b\u59cb");
+      .text("カウントダウン開始");
 
     // ボタンクリック処理
     cdBtn.on("click", function () {
