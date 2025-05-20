@@ -24,7 +24,7 @@
     var frontPath = d3.geo.path().projection(projection90);
     var backPath = d3.geo.path().projection(projection180);
 
-    d3.json("https://gist.githubusercontent.com/shimizu/97c156f7f9137586f784/raw/4be1053346fa88d448c2290c49689634c8102b0a/Landmasses.geojson", function(geojson){
+    d3.json("https://raw.githubusercontent.com/mungeru/oz/refs/heads/main/Landmasses.geojson", function(geojson){
       var stage = svg.append("g")
         .attr("transform", "rotate(23.4," + width/2 + "," + height/2 + ")");
 
