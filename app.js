@@ -98,7 +98,7 @@
       .style("fill", "#333")
       .text("JPN");
 
-    // ƒJƒEƒ“ƒgƒ_ƒEƒ“ŠJnƒ{ƒ^ƒ“
+    // ã‚«ã‚¦ãƒ³ãƒˆãƒ€ã‚¦ãƒ³é–‹å§‹ãƒœã‚¿ãƒ³
     var btnWidth = 160;
     var btnHeight = 40;
     var btnFontSize = 14;
@@ -122,9 +122,9 @@
       .attr("font-family", "Arial")
       .attr("font-weight", "bold")
       .style("fill", "white")
-      .text("ƒJƒEƒ“ƒgƒ_ƒEƒ“ŠJn");
+      .text("\u30ab\u30a6\u30f3\u30c8\u30c0\u30a6\u30f3\u958b\u59cb");
 
-    // ƒ{ƒ^ƒ“ƒNƒŠƒbƒNˆ—
+    // ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯å‡¦ç†
     cdBtn.on("click", function () {
       countdownTime = Math.floor(Math.random() * 26) + 5;
       clockText.remove();
@@ -147,7 +147,7 @@
         if (countdownTime <= 0) {
           clearInterval(countdownInterval);
           document.getElementById("clockSound").play();
-          clockText.text("ƒJƒEƒ“ƒgƒ_ƒEƒ“I—¹I");
+          clockText.text("ã‚«ã‚¦ãƒ³ãƒˆãƒ€ã‚¦ãƒ³çµ‚äº†ï¼");
         }
       }, 1000);
     });
