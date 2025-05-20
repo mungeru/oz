@@ -1,4 +1,4 @@
-﻿(function(){
+(function(){
   "use strict";
 
   var svg = d3.select("svg");
@@ -122,23 +122,28 @@
       .attr("font-family", "Arial")
       .attr("font-weight", "bold")
       .style("fill", "white")
-      .text("カウントダウン開始");
+      .text("count down start");
 
     // ボタンクリック処理
     cdBtn.on("click", function () {
       countdownTime = Math.floor(Math.random() * 26) + 5;
-      clockText.remove();
+clockText.remove();
 
-      clockText = svg.append("text")
-        .attr("x", width / 2)
-        .attr("y", height / 2 + 7)
-        .attr("text-anchor", "middle")
-        .attr("dominant-baseline", "middle")
-        .attr("font-size", fontSize)
-        .attr("font-weight", "bold")
-        .attr("font-family", "Arial")
-        .style("fill", "#333")
-        .text(formatTime(countdownTime));
+const randHour = Math.floor(Math.random() * 24);
+const randMin = Math.floor(Math.random() * 60);
+const randSec = Math.floor(Math.random() * 60);
+const randomTime = `${pad(randHour)}:${pad(randMin)}:${pad(randSec)}`;
+
+clockText = svg.append("text")
+  .attr("x", width / 2)
+  .attr("y", height / 2 + 7)
+  .attr("text-anchor", "middle")
+  .attr("dominant-baseline", "middle")
+  .attr("font-size", fontSize)
+  .attr("font-weight", "bold")
+  .attr("font-family", "Arial")
+  .style("fill", "#333")
+  .text(randomTime);
 
       countdownInterval = setInterval(function() {
         countdownTime--;
